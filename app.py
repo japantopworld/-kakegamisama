@@ -31,7 +31,6 @@ def mypage():
         return redirect(url_for("login"))
     return render_template("index.html")
 
-# ===== Lottery results hub (admin only)
 @app.route("/lottery/results")
 def lottery_results_home():
     if "user" not in session:
@@ -40,7 +39,6 @@ def lottery_results_home():
         return redirect(url_for("mypage"))
     return render_template("lottery_results_home.html")
 
-# ===== Each lottery result pages (admin only)
 def admin_only():
     if "user" not in session:
         return False
@@ -81,5 +79,9 @@ def logout():
     session.clear()
     return redirect(url_for("top"))
 
+# ★変更ここから★
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    import os
+    port = int(os.environ.get("PORT", 8080))
+    app.run(host="0.0.0.0", port=port, debug=False)
+# ★変更ここまで★

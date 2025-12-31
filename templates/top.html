@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>賭神様（かけがみさま）｜神託競技AI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --gold: #c9a24d;
+  --ink: #2b2b2b;
+  --bg-card: rgba(255,255,255,0.85);
+  --border-soft: rgba(0,0,0,0.15);
+}
+
+/* ===== 背景：神社（日中） ===== */
+body {
+  font-family: 'Noto Serif JP','Yu Mincho',serif;
+  color: #ffffff;
+  min-height: 100vh;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.45),
+      rgba(0,0,0,0.65)
+    ),
+    url("/static/img/神社（日中）.jpg") center / cover no-repeat fixed;
+}
+
+/* ===== HERO ===== */
+header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 24px;
+}
+
+.symbol {
+  font-size: 42px;
+  color: var(--gold);
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-size: 36px;
+  letter-spacing: 0.3em;
+  color: #fff2b8;
+  margin-bottom: 28px;
+}
+
+header p {
+  max-width: 560px;
+  font-size: 16px;
+  line-height: 2;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 44px;
+}
+
+/* ===== ボタン ===== */
+.hero-actions {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero-btn {
+  padding: 16px 48px;
+  background: var(--gold);
+  color: #000;
+  text-decoration: none;
+  font-size: 15px;
+  letter-spacing: 0.25em;
+  border-radius: 4px;
+}
+
+.sub-btn {
+  padding: 16px 48px;
+  background: rgba(255,255,255,0.95);
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 0.25em;
+  border: 1px solid var(--border-soft);
+  border-radius: 4px;
+}
+
+/* ===== MAIN ===== */
+main {
+  max-width: 1200px;
+  margin: 0 auto 120px;
+  padding: 0 24px;
+}
+
+main h2 {
+  text-align: center;
+  margin: 96px 0 56px;
+  color: #fff2b8;
+  letter-spacing: 0.25em;
+}
+
+/* ===== カード ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+}
+
+.card {
+  background: var(--bg-card);
+  padding: 36px 24px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid var(--border-soft);
+}
+
+.card h3 {
+  color: var(--gold);
+  margin-bottom: 14px;
+  letter-spacing: 0.2em;
+}
+
+.card p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 40px 16px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.85);
+  background: rgba(0,0,0,0.55);
+  border-top: 1px solid rgba(201,162,77,0.3);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="symbol">⛩</div>
+
+  <h1>
+    <ruby>賭神様<rt>かけがみさま</rt></ruby>
+  </h1>
+
+  <p>
+    公営競技に潜む無数の因果をAIが解析し、<br>
+    神託として最適な一手のみを提示します。
+  </p>
+
+  <div class="hero-actions">
+    <a href="/login" class="hero-btn">参拝して予測を見る</a>
+    <a href="/register" class="sub-btn">新規参拝はこちら</a>
+  </div>
+</header>
+
+<main>
+  <h2>御神託対象競技</h2>
+
+  <div class="grid">
+    <div class="card"><h3>競艇</h3><p>水面・モーター・選手相性を統合解析</p></div>
+    <div class="card"><h3>競馬（中央）</h3><p>血統・展開・馬場傾向を解析</p></div>
+    <div class="card"><h3>競馬（地方）</h3><p>地方競馬特化データを解析</p></div>
+    <div class="card"><h3>競輪</h3><p>ライン構成と脚質を因果推論</p></div>
+    <div class="card"><h3>オート</h3><p>走路・整備傾向を反映</p></div>
+    <div class="card"><h3>PIST6</h3><p>屋内特化データ予測</p></div>
+    <div class="card"><h3>ナンバーズ</h3><p>過去抽選傾向を解析</p></div>
+    <div class="card"><h3>ロト</h3><p>組合せ確率と偏りを解析</p></div>
+  </div>
+</main>
+
+<footer>
+  © 2026 賭神様 ｜ <a href="/terms">利用規約</a>
+</footer>
+
+</body>
+</html>
